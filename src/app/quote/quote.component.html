@@ -1,0 +1,44 @@
+<div class="container">
+    <h1 class="text-center">QuoteFlix</h1>
+    <hr>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Quotes</h2>
+        <hr>
+        <div class="border rounded p-3 mb-2" *ngFor="let quote of quotes; let i = index">
+          <div>
+            <p id="{{i}}">
+              {{ quote.quote }}
+            </p>
+            <div class="row mb-3">
+              <div class="col-md-3">
+                <button class="btn btn-outline-primary" (click)="upvoteQuote(i)">Like</button>
+              </div>
+  
+              <div class="col-md-3">
+                <button class="btn btn-outline-danger" (click)="downvoteQuote(i)">Dislike</button>
+              </div>
+            </div>
+            <hr>
+            <button class="btn btn-secondary" (click)="toggleDetails(i)">Toggle Details</button>
+          </div>
+  
+          <div>
+            <app-quote-details
+              *ngIf="quote.showDescription"
+              [quote]="quote"
+              (isComplete)="deleteQuote($event, i)"
+            ></app-quote-details>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+    </div>
+  
+    <p *ngIf="quotes.length > 0">You have at least a quote</p>
+  </div>
+  
