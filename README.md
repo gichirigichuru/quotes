@@ -1,6 +1,13 @@
 # Quotes
+By Zachary Gichiri
+## Description
+Quotes is an application that lets one post a quote through a form.
+The quote can then be upvoted or downvoted.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+
+## Live Site Link
+
 
 ## Development server
 
@@ -25,3 +32,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Support and contact details
+gichirigichuru@gmail.com
+
+## License
+This is under the [MIT](LICENSE) license
+Copyright (c) 2022 **Zachary Gichiri**
