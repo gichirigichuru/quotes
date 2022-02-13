@@ -1,0 +1,30 @@
+<div class="container-fluid mt-3 bg-dark text-white p-3 rounded">
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <h5>Upvotes</h5>
+        <h6>{{ quote.upvotes }}</h6>
+      </div>
+      <div class="col-md-4">
+        <h5>Downvotes</h5>
+        <h6>{{ quote.downvotes }}</h6>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6">
+        <h5>Posted By:</h5>
+        <p>{{ quote.postedBy }}</p>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <p>It's {{quote.dayAdded | dateCount}} days since this quote was posted.</p>
+    </div>
+  
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <button (click)="quoteDelete(true)" class="btn btn-danger">
+          Delete Quote
+        </button>
+      </div>
+    </div>
+  </div>
+git   
